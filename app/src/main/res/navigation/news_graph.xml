@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/news_graph"
+    app:startDestination="@id/homeScreenFragment">
+
+    <fragment
+        android:id="@+id/homeScreenFragment"
+        android:name="com.example.clickstask.features.presentation.ui.HomeScreenFragment"
+        android:label="fragment_home_screen"
+        tools:layout="@layout/fragment_home_screen" >
+        <action
+            android:id="@+id/action_to_newsDetailsFragment"
+            app:destination="@id/newsDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/newsDetailsFragment"
+        android:name="com.example.clickstask.features.presentation.ui.NewsDetailsFragment"
+        android:label="fragment_news_details"
+        tools:layout="@layout/fragment_news_details" >
+        <argument
+            android:name="sourceName"
+            app:argType="string"
+            android:defaultValue="source name" />
+        <argument
+            android:name="title"
+            app:argType="string"
+            android:defaultValue="titile" />
+        <argument
+            android:name="desc"
+            android:defaultValue="Description"
+            app:argType="string" />
+        <argument
+            android:name="imageUrl"
+            app:argType="string" />
+    </fragment>
+</navigation>

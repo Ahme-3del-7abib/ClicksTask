@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_grey"
+    tools:context=".features.presentation.ui.NewsDetailsFragment">
+
+    <RelativeLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_16dp">
+
+        <ImageView
+            android:id="@+id/back_btn"
+            android:layout_width="@dimen/_30dp"
+            android:layout_height="@dimen/_30dp"
+            android:layout_alignParentStart="true"
+            android:contentDescription="@string/todo"
+            android:src="@drawable/ic_baseline_arrow_back_ios_24" />
+
+        <ImageView
+            android:layout_width="@dimen/_30dp"
+            android:layout_height="@dimen/_30dp"
+            android:layout_alignParentEnd="true"
+            android:contentDescription="@string/todo"
+            android:src="@drawable/ic_baseline_save_alt_24" />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/image_new"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_300dp"
+        android:layout_below="@+id/toolbar"
+        android:contentDescription="@string/todo"
+        android:scaleType="centerCrop" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/image_new"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/border_two_corner_white_content"
+        android:elevation="@dimen/_4dp"
+        android:orientation="vertical"
+        android:padding="@dimen/_30dp">
+
+
+        <TextView
+            android:id="@+id/source_name_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/_4dp"
+            android:gravity="end"
+            android:textColor="@android:color/holo_blue_dark"
+            android:textSize="@dimen/_14sp"
+            android:textStyle="normal"
+            tools:text="@string/source_name" />
+
+        <TextView
+            android:id="@+id/title_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/_4dp"
+            android:layout_marginTop="@dimen/_16dp"
+            android:layout_marginEnd="@dimen/_4dp"
+            android:layout_marginBottom="@dimen/_16dp"
+            android:gravity="center"
+            android:padding="@dimen/_4dp"
+            android:textColor="@android:color/black"
+            android:textDirection="rtl"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            tools:text="@string/title" />
+
+        <TextView
+            android:id="@+id/description_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/_8dp"
+            android:gravity="center"
+            android:padding="@dimen/_4dp"
+            android:textColor="@android:color/black"
+            android:textDirection="rtl"
+            android:textSize="@dimen/_16sp"
+            android:textStyle="normal"
+            tools:text="@string/title" />
+
+    </LinearLayout>
+
+</RelativeLayout>
